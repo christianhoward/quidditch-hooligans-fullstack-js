@@ -5,11 +5,23 @@ export default function(state=[], action) {
         case FETCH_PLAYERS:
             return action.payload;
         case SUBMIT_PLAYER:
-            return action.payload;
+            return [
+                ...state,
+                action.payload
+            ];
         case UPDATE_PLAYER:
-            return action.payload;
+            return state.map((player) => {
+                if (player._id === action.payload._id) {
+                    return [
+                        ...player,
+                        ...action.payload
+                    ];
+                } else {
+                    return player;
+                }
+            });
         case DELETE_PLAYER:
-            return action.payload;
+            return state.filter((player) => player._id !== action.payload._id);
         default:
             return state;
     }

@@ -7,19 +7,16 @@ export const fetchPlayers = () => async dispatch => {
 };
 
 export const submitPlayer = (player) => async dispatch => {
-    axios.post('/api/players', player);
-    const res = await axios.get('/api/players');
+    const res = await axios.post('/api/players', player);
     dispatch({ type: SUBMIT_PLAYER, payload: res.data });
 };
 
 export const updatePlayer = (player) => async dispatch => {
-    axios.patch(`/api/players/${player._id}`, player);
-    const res = await axios.get('/api/players');
+    const res = await axios.patch(`/api/players/${player._id}`, player);
     dispatch({ type: UPDATE_PLAYER, payload: res.data });
 };
 
 export const deletePlayer = (id) => async dispatch => {
-    axios.delete(`/api/players/${id}`);
-    const res = await axios.get(`/api/players`);
+    const res = await axios.delete(`/api/players/${id}`);
     dispatch({ type: DELETE_PLAYER, payload: res.data });
 };
