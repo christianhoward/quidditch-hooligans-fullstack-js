@@ -51,7 +51,7 @@ module.exports = app => {
     });
     
     app.delete('/api/players/:id', async (req, res) => {
-        var id = req.params.id;
+        const id = req.params.id;
         const player = await Player.findByIdAndRemove(id);
         res.send(player);
     });
