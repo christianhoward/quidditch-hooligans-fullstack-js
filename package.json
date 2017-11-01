@@ -12,7 +12,8 @@
     "server": "nodemon server.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha ./**/*.test.js"
   },
   "author": "Christian Howard",
   "license": "ISC",
@@ -23,5 +24,11 @@
     "lodash": "^4.17.4",
     "mongoose": "^4.12.0",
     "nodemon": "^1.12.1"
+  },
+  "devDependencies": {
+    "expect": "^21.2.1",
+    "mocha": "^4.0.1",
+    "mongodb": "^2.2.33",
+    "supertest": "^3.0.0"
   }
 }

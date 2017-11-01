@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const playerSchema = new Schema({
-    playername: String,
+    playername: { 
+        type: String,
+        required: true
+    },
     age: Number,
     city: String,
     country: String,

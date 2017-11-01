@@ -12,7 +12,11 @@ module.exports = app => {
     app.get('/api/players/:id', async(req, res) => {
         const id = req.params.id;
         const player = await Player.findById(id);
-        res.send(player);
+        if (player) {
+            res.send(player);
+        } else {
+            res.status(404).send(res.err);
+        }
     });
 
     app.post('/api/players', async (req, res) => {
@@ -53,6 +57,10 @@ module.exports = app => {
     app.delete('/api/players/:id', async (req, res) => {
         const id = req.params.id;
         const player = await Player.findByIdAndRemove(id);
-        res.send(player);
+        if (player) {
+            res.send(player);
+        } else {
+            res.status(422).send(res.err);
+        }
     });
 }
