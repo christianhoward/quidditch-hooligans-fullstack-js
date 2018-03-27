@@ -15,6 +15,7 @@ export default ({ input, name, label, type, options }) => {
                 </div>
             );
         // case 'radio':
+        //     console.log(options);
         //     return (
         //         <div>
         //             <label>{label}</label> {
