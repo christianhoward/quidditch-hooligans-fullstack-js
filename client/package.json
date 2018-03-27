@@ -7,6 +7,12 @@
       "target": "http://localhost:5000"
     }
   },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "mocha --compilers js:babel-core/register --require ./tests/test_helper.js --recursive ./test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "react": "^16.0.0",
@@ -18,10 +24,5 @@
     "redux-form": "^7.0.4",
     "redux-thunk": "^2.2.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+  "devDependencies": {}
 }
