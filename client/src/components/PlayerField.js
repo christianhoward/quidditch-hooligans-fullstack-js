@@ -28,26 +28,26 @@ export default ({ input, name, label, type, options }) => {
                     </select>
                 </div>
             );
-        // case 'radio':
-        //     return (
-        //         <div>
-        //             <label>{label}</label> {
-        //                 options.map(option => {
-        //                     return (
-        //                         <div key={option.id}>
-        //                             {option.data}
-        //                             <input {...input} onBlur={(e) => e.preventDefault()} type='radio' value={option.id} style={{ marginLeft: '10px', marginBottom: '5px' }} onClick={(e) => console.log(e.target.value)} />
-        //                         </div>
-        //                     );
-        //                 })
-        //             }
-        //         </div>
-        //     );
-        default:
+        case 'text':
             return (
                 <div>
                     <label>{label}</label>
                     <input {...input} style={{ marginLeft: '10px', marginBottom: '5px' }} />
+                </div>
+            );
+        default:
+            return (
+                <div>
+                    <label>{label}</label> {
+                        options.map(option => {
+                            return (
+                                <div key={option.id}>
+                                    {option.data}
+                                    <input {...input} type='radio' value={option.id} style={{ marginLeft: '10px', marginBottom: '5px' }} checked={input.value === option.id}/>
+                                </div>
+                            );
+                        })
+                    }
                 </div>
             );
         }

@@ -3,7 +3,7 @@ export default [
     { label: 'Age', name: 'age', type: 'number', min: '10', max: '99' },
     { label: 'City', name: 'city', type: 'text' },
     { label: 'Country', name: 'country', type: 'text' },
-    { label: 'Gender', name: 'gender', type: 'radio', options: [
+    { label: 'Gender', name: 'gender', options: [
         { 
             data: 'Male', 
             id: 'Male' 
@@ -12,7 +12,15 @@ export default [
             id: 'Female' 
         }] 
     },
-    { label: 'Handedness', name: 'handedness', type: 'text' },
+    { label: 'Handedness', name: 'handedness', options: [
+        {
+            data: 'Right',
+            id: 'Right'
+        }, {
+            data: 'Left',
+            id: 'Left'
+        }
+    ] },
     { label: 'Broom', name: 'broom', type: 'text' },
     { label: 'Position', name: 'position', type: 'select', options: [
         {
