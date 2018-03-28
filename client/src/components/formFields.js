@@ -44,6 +44,6 @@ export default [
             id: 'Slytherin'
         }
     ] },
-    { label: 'Favorite Color', name: 'favoritecolor', type: 'text' },
+    { label: 'Favorite Color', name: 'favoritecolor', type: 'color' },
     { label: 'Headshot', name: 'headshot', type: 'text' }
 ];

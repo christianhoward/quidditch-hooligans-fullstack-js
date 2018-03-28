@@ -3,6 +3,13 @@ import React from 'react';
 
 export default ({ input, name, label, type, options }) => {
     switch (type) {
+        case 'color':
+            return (
+                <div>
+                    <label>{label}</label>
+                    <input {...input} type='color' style={{ marginLeft: '10px', marginBottom: '5px' }} />
+                </div>
+            );
         case 'number':
             return (
                 <div>
