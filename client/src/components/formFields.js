@@ -1,5 +1,5 @@
 export default [
-    { label: 'Player Name', name: 'playername', type: 'text' },
+    { label: 'Player Name', name: 'playername', type: 'text', placeholder: 'Full Name' },
     { label: 'Age', name: 'age', type: 'number', min: '10', max: '99' },
     { label: 'City', name: 'city', type: 'text' },
     { label: 'Country', name: 'country', type: 'text' },
@@ -53,5 +53,5 @@ export default [
         }
     ] },
     { label: 'Favorite Color', name: 'favoritecolor', type: 'color' },
-    { label: 'Headshot', name: 'headshot', type: 'text' }
+    { label: 'Headshot', name: 'headshot', type: 'text', placeholder: '.jpg files only' }
 ];

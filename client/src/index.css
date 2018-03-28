@@ -1,0 +1,13 @@
+label { 
+    width: 110px; 
+    text-align: left; 
+}
+
+.radios {
+    display: inline-block;
+    width: 90px;
+}
+
+.radios > input {
+    margin-left: 10px;
+}

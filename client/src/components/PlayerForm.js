@@ -10,9 +10,9 @@ import { submitPlayer, updatePlayer } from '../actions';
 
 class PlayerForm extends Component {
     renderFields() {
-        return _.map(formFields, ({ label, name, type, options }) => {
+        return _.map(formFields, ({ label, name, type, options, placeholder }) => {
             return (
-                <Field key={name} component={PlayerField} label={label} name={name} type={type} options={options} />
+                <Field key={name} component={PlayerField} label={label} name={name} type={type} options={options} placeholder={placeholder} />
             );
         });
     }
