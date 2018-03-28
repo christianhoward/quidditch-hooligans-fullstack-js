@@ -3,6 +3,13 @@ import React from 'react';
 
 export default ({ input, name, label, type, options }) => {
     switch (type) {
+        case 'number':
+            return (
+                <div>
+                    <label>{label}</label>
+                    <input {...input} type='number' style={{ marginLeft: '10px', marginBottom: '5px' }} />
+                </div>
+            );
         case 'select':
             return (
                 <div>
@@ -15,7 +22,6 @@ export default ({ input, name, label, type, options }) => {
                 </div>
             );
         // case 'radio':
-        //     console.log(options);
         //     return (
         //         <div>
         //             <label>{label}</label> {
@@ -23,7 +29,7 @@ export default ({ input, name, label, type, options }) => {
         //                     return (
         //                         <div key={option.id}>
         //                             {option.data}
-        //                             <input {...input} type='radio' value={option.id} style={{ marginLeft: '10px', marginBottom: '5px' }} onClick={(e) => console.log(e.target.value)} />
+        //                             <input {...input} onBlur={(e) => e.preventDefault()} type='radio' value={option.id} style={{ marginLeft: '10px', marginBottom: '5px' }} onClick={(e) => console.log(e.target.value)} />
         //                         </div>
         //                     );
         //                 })
