@@ -18,17 +18,17 @@
   "author": "Christian Howard",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "concurrently": "^3.5.0",
-    "express": "^4.16.1",
-    "lodash": "^4.17.4",
-    "mongoose": "^4.12.0",
-    "nodemon": "^1.12.1"
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "mongoose": "^4.13.14",
+    "nodemon": "^1.17.5"
   },
   "devDependencies": {
     "expect": "^21.2.1",
-    "mocha": "^4.0.1",
-    "mongodb": "^2.2.33",
-    "supertest": "^3.0.0"
+    "mocha": "^4.1.0",
+    "mongodb": "^2.2.35",
+    "supertest": "^3.1.0"
   }
 }
